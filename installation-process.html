@@ -1,0 +1,1050 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Solar Installation Process | Kalinga GreenTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
+
+      body {
+        font-family: "Manrope", sans-serif;
+        background: radial-gradient(
+            circle at 8% 0%,
+            rgba(15, 159, 103, 0.18),
+            transparent 36%
+          ),
+          radial-gradient(
+            circle at 90% 2%,
+            rgba(11, 120, 209, 0.14),
+            transparent 34%
+          ),
+          radial-gradient(
+            circle at 52% 20%,
+            rgba(245, 185, 10, 0.1),
+            transparent 28%
+          ),
+          linear-gradient(180deg, #f6fcf8 0%, #ffffff 45%, #edf9f1 100%);
+        color: #1f3b31;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      .brand-font {
+        font-family: "Sora", sans-serif;
+      }
+
+      /* Connector line between steps */
+      .step-connector {
+        position: absolute;
+        top: 2.75rem;
+        left: 50%;
+        width: 2px;
+        background: linear-gradient(180deg, #0f9f67, #0b78d1);
+        height: calc(100% + 2rem);
+        transform: translateX(-50%);
+        z-index: 0;
+      }
+
+      @media (min-width: 768px) {
+        .step-connector-h {
+          position: absolute;
+          top: 2.6rem;
+          left: calc(50% + 2.75rem);
+          width: calc(100% - 5.5rem);
+          height: 2px;
+          background: linear-gradient(90deg, #0f9f67, #0b78d1);
+          z-index: 0;
+        }
+      }
+
+      .step-card:hover .step-icon {
+        transform: scale(1.12) rotate(-4deg);
+      }
+
+      .step-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .fade-in {
+        animation: fadeInUp 0.6s ease both;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .step-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .step-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .step-card:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .step-card:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+
+      .steps-sticky-wrap {
+        position: sticky;
+        top: 76px;
+        z-index: 40;
+      }
+
+      .step-pill {
+        border: 1px solid rgba(16, 185, 129, 0.25);
+        background: rgba(255, 255, 255, 0.92);
+        color: #14532d;
+        transition: all 0.25s ease;
+      }
+
+      .step-pill.active {
+        background: #0f9f67;
+        border-color: #0f9f67;
+        color: #ffffff;
+        box-shadow: 0 8px 22px rgba(15, 159, 103, 0.28);
+        transform: translateY(-1px);
+      }
+    </style>
+  <style>
+  .whatsapp-float-btn {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 9999px;
+    background: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .whatsapp-float-btn svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
+
+  .whatsapp-float-btn:hover {
+    background: #1fb858;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.26);
+  }
+
+  .whatsapp-float-btn:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+
+  .whatsapp-float-btn .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (max-width: 640px) {
+    .whatsapp-float-btn {
+      right: 12px;
+      bottom: 12px;
+      width: 52px;
+      height: 52px;
+    }
+
+    .whatsapp-float-btn svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+</style>
+<style>
+  /* site-responsive-helper-v1 */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
+  }
+  /* site-fixed-header-all-devices */
+  header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 60;
+  }
+
+  body {
+    padding-top: 4rem;
+  }
+
+  @media (max-width: 1024px) {
+    .whatsapp-float-btn {
+      right: 14px;
+      bottom: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .whatsapp-float-btn {
+      right: 12px;
+      bottom: 12px;
+    }
+  }
+</style>
+    <script src="site-meta.js"></script>
+    <script src="site-meta-loader.js" defer></script>
+</head>
+  <body class="antialiased">
+    <!-- -- Navbar -- -->
+    <header
+      class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-emerald-100/80"
+    >
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="h-16 flex items-center justify-between">
+          <a
+            href="index.html"
+            class="transition-all duration-300 hover:scale-105 hover:opacity-80 inline-flex items-center gap-2"
+          >
+            <img
+              src="Designer.png"
+              alt="Kalinga GreenTech"
+              class="h-12 sm:h-14 lg:h-16 w-auto object-contain drop-shadow-sm transition-all duration-300"
+            />
+            <span
+              class="brand-font text-base sm:text-lg font-bold text-emerald-800 leading-tight"
+              >Kalinga GreenTech</span
+            >
+          </a>
+
+          <ul
+            class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="hover:text-emerald-700 transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="our-story.html"
+                class="hover:text-emerald-700 transition-colors"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a
+                href="services.html"
+                class="hover:text-emerald-700 transition-colors"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="why-choose-us.html"
+                class="hover:text-emerald-700 transition-colors"
+                >Why Choose Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="see-your-savings.html"
+                class="hover:text-emerald-700 transition-colors"
+                >See Savings</a
+              >
+            </li>
+            <li>
+              <a
+                href="installation-process.html"
+                class="text-emerald-700 border-b-2 border-emerald-500 pb-0.5"
+                >Installation</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="hover:text-emerald-700 transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <button
+            id="mobileMenuBtn"
+            type="button"
+            class="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-xl border border-emerald-200/90 bg-white text-emerald-800 shadow-sm hover:bg-emerald-50 active:scale-95 transition-all duration-200"
+            aria-label="Open menu"
+            aria-controls="mobileMenu"
+            aria-expanded="false"
+          >
+            <svg
+              id="menuIconOpen"
+              viewBox="0 0 24 24"
+              class="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg
+              id="menuIconClose"
+              viewBox="0 0 24 24"
+              class="hidden h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg></button
+          ><a
+            href="see-your-savings.html"
+            class="hidden sm:inline-flex items-center rounded-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 text-sm font-semibold shadow-sm transition-all"
+            >Get Estimate</a
+          >
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden pb-3 pt-2">
+          <ul
+            class="grid gap-2 text-sm font-semibold text-slate-700 rounded-2xl border border-emerald-100 bg-white/95 p-2 shadow-lg backdrop-blur"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="our-story.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a
+                href="services.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="why-choose-us.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Why Choose Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="see-your-savings.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >See Savings</a
+              >
+            </li>
+            <li>
+              <a
+                href="installation-process.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Installation</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- -- Hero Banner -- -->
+      <section class="relative overflow-hidden py-16 md:py-24">
+        <div class="absolute inset-0 -z-10">
+          <img
+            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=80"
+            alt="Solar panels hero"
+            class="h-full w-full object-cover opacity-15"
+          />
+        </div>
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm font-semibold mb-5"
+          >
+            &#128736; Step-by-step Guide
+          </p>
+          <h1
+            class="text-4xl sm:text-5xl font-extrabold text-emerald-950 leading-tight"
+          >
+            Solar Installation Process
+          </h1>
+          <p
+            class="mt-5 text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto"
+          >
+            From your first enquiry to a fully commissioned solar system -
+            here's exactly what happens at every stage when you go solar with
+            Kalinga GreenTech
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3 justify-center">
+            <a
+              href="contact.html"
+              class="rounded-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 font-semibold shadow-md hover:shadow-lg transition-all"
+              >Book a Free Assessment</a
+            >
+            <a
+              href="see-your-savings.html"
+              class="rounded-full border border-emerald-300 hover:border-emerald-500 bg-white text-emerald-800 px-6 py-3 font-semibold transition-all"
+              >Calculate Your Cost</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- -- Sticky Step Strip -- -->
+      <section class="py-4">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="steps-sticky-wrap">
+            <div
+              class="rounded-2xl border border-emerald-100 bg-white/90 backdrop-blur px-3 py-3 shadow-sm"
+            >
+              <div
+                id="stepsTracker"
+                class="grid grid-cols-2 md:grid-cols-4 gap-2"
+              >
+                <button
+                  type="button"
+                  class="step-pill active rounded-xl px-3 py-2 text-left"
+                  data-step-target="step1"
+                >
+                  <p class="text-xs font-bold uppercase tracking-wide">
+                    Step 1
+                  </p>
+                  <p class="text-sm font-semibold">Assessment</p>
+                </button>
+                <button
+                  type="button"
+                  class="step-pill rounded-xl px-3 py-2 text-left"
+                  data-step-target="step2"
+                >
+                  <p class="text-xs font-bold uppercase tracking-wide">
+                    Step 2
+                  </p>
+                  <p class="text-sm font-semibold">Approvals</p>
+                </button>
+                <button
+                  type="button"
+                  class="step-pill rounded-xl px-3 py-2 text-left"
+                  data-step-target="step3"
+                >
+                  <p class="text-xs font-bold uppercase tracking-wide">
+                    Step 3
+                  </p>
+                  <p class="text-sm font-semibold">Installation</p>
+                </button>
+                <button
+                  type="button"
+                  class="step-pill rounded-xl px-3 py-2 text-left"
+                  data-step-target="step4"
+                >
+                  <p class="text-xs font-bold uppercase tracking-wide">
+                    Step 4
+                  </p>
+                  <p class="text-sm font-semibold">Testing</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -- Steps Detail -- -->
+      <section class="py-16 md:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <!-- Step 1 -->
+          <div
+            id="step1"
+            class="step-card fade-in group rounded-3xl bg-white border border-emerald-100 shadow-sm hover:shadow-xl transition-all overflow-hidden grid md:grid-cols-2"
+            data-step="step1"
+          >
+            <div class="p-8 md:p-10 flex flex-col justify-center">
+              <div class="flex items-center gap-4 mb-5">
+                <div
+                  class="step-icon flex-shrink-0 h-14 w-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl shadow-sm"
+                >
+                  &#128203;
+                </div>
+                <div>
+                  <p
+                    class="text-xs font-bold uppercase tracking-widest text-emerald-500"
+                  >
+                    Step 01
+                  </p>
+                  <h2 class="text-2xl font-extrabold text-emerald-950">
+                    Assessment &amp; Planning
+                  </h2>
+                </div>
+              </div>
+              <p class="text-slate-600 leading-relaxed mb-6">
+                Before any work begins, we evaluate your property, energy
+                patterns, and goals to design the perfect system for your needs.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Check roof space - shadow-free area and correct orientation
+                    (south-facing ideal)</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Analyse monthly electricity usage and peak consumption
+                    hours</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Recommend the right system type:
+                    <strong>On-Grid</strong> (grid-tied, lower cost) or
+                    <strong>Off-Grid</strong> (with battery backup)</span
+                  >
+                </li>
+              </ul>
+              <div
+                class="mt-6 inline-flex items-center gap-2 rounded-full bg-emerald-50 border border-emerald-200 px-4 py-2 text-sm text-emerald-800 font-semibold w-fit"
+              >
+                &#9201; Typical Duration: 1-2 Days
+              </div>
+            </div>
+            <div class="relative min-h-[240px]">
+              <img
+                src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=80"
+                alt="Assessment and planning"
+                class="h-full w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-l from-transparent to-white/10"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            id="step2"
+            class="step-card fade-in group rounded-3xl bg-white border border-emerald-100 shadow-sm hover:shadow-xl transition-all overflow-hidden grid md:grid-cols-2"
+            data-step="step2"
+          >
+            <div class="relative min-h-[240px] md:order-1 order-2">
+              <img
+                src="https://images.unsplash.com/photo-1497449493050-aad1e7cad165?auto=format&fit=crop&w=900&q=80"
+                alt="Approvals and documentation"
+                class="h-full w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-transparent to-white/10"
+              ></div>
+            </div>
+            <div
+              class="p-8 md:p-10 flex flex-col justify-center md:order-2 order-1"
+            >
+              <div class="flex items-center gap-4 mb-5">
+                <div
+                  class="step-icon flex-shrink-0 h-14 w-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-2xl shadow-sm"
+                >
+                  &#128221;
+                </div>
+                <div>
+                  <p
+                    class="text-xs font-bold uppercase tracking-widest text-sky-500"
+                  >
+                    Step 02
+                  </p>
+                  <h2 class="text-2xl font-extrabold text-emerald-950">
+                    Approvals &amp; Documentation
+                  </h2>
+                </div>
+              </div>
+              <p class="text-slate-600 leading-relaxed mb-6">
+                Our team handles all the paperwork and official approvals so you
+                don't have to worry about compliance or permits.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Apply for government subsidy and net metering
+                    registration</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Conduct site feasibility check by certified engineers</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Obtain official approval from local DISCOM / electricity
+                    board to proceed</span
+                  >
+                </li>
+              </ul>
+              <div
+                class="mt-6 inline-flex items-center gap-2 rounded-full bg-sky-50 border border-sky-200 px-4 py-2 text-sm text-sky-800 font-semibold w-fit"
+              >
+                &#9201; Typical Duration: 5-15 Days
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            id="step3"
+            class="step-card fade-in group rounded-3xl bg-white border border-emerald-100 shadow-sm hover:shadow-xl transition-all overflow-hidden grid md:grid-cols-2"
+            data-step="step3"
+          >
+            <div class="p-8 md:p-10 flex flex-col justify-center">
+              <div class="flex items-center gap-4 mb-5">
+                <div
+                  class="step-icon flex-shrink-0 h-14 w-14 rounded-2xl bg-yellow-100 text-yellow-700 flex items-center justify-center text-2xl shadow-sm"
+                >
+                  &#128295;
+                </div>
+                <div>
+                  <p
+                    class="text-xs font-bold uppercase tracking-widest text-yellow-600"
+                  >
+                    Step 03
+                  </p>
+                  <h2 class="text-2xl font-extrabold text-emerald-950">
+                    Installation
+                  </h2>
+                </div>
+              </div>
+              <p class="text-slate-600 leading-relaxed mb-6">
+                Our trained installation team sets up your complete solar system
+                efficiently and safely - from the mounting frame to the final
+                wiring.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-yellow-100 text-yellow-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Install galvanised mounting structure suited to your roof
+                    type</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-yellow-100 text-yellow-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Fix and secure solar panels on the mounting frame</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-yellow-100 text-yellow-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Connect all DC/AC wiring, solar inverter, and battery (for
+                    off-grid systems)</span
+                  >
+                </li>
+              </ul>
+              <div
+                class="mt-6 inline-flex items-center gap-2 rounded-full bg-yellow-50 border border-yellow-200 px-4 py-2 text-sm text-yellow-800 font-semibold w-fit"
+              >
+                &#9201; Typical Duration: 1-3 Days
+              </div>
+            </div>
+            <div class="relative min-h-[240px]">
+              <img
+                src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=900&q=80"
+                alt="Solar panel installation"
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div
+            id="step4"
+            class="step-card fade-in group rounded-3xl bg-white border border-emerald-100 shadow-sm hover:shadow-xl transition-all overflow-hidden grid md:grid-cols-2"
+            data-step="step4"
+          >
+            <div class="relative min-h-[240px] md:order-1 order-2">
+              <img
+                src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&w=900&q=80"
+                alt="Testing and commissioning"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div
+              class="p-8 md:p-10 flex flex-col justify-center md:order-2 order-1"
+            >
+              <div class="flex items-center gap-4 mb-5">
+                <div
+                  class="step-icon flex-shrink-0 h-14 w-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl shadow-sm"
+                >
+                  ?
+                </div>
+                <div>
+                  <p
+                    class="text-xs font-bold uppercase tracking-widest text-emerald-500"
+                  >
+                    Step 04
+                  </p>
+                  <h2 class="text-2xl font-extrabold text-emerald-950">
+                    Testing &amp; Commissioning
+                  </h2>
+                </div>
+              </div>
+              <p class="text-slate-600 leading-relaxed mb-6">
+                Before handover, every component is thoroughly tested and
+                inspected to ensure safe, reliable, and optimised performance.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Complete safety inspection of all electrical connections
+                    and components</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Install bi-directional net meter for grid-export
+                    measurement</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold"
+                    >&#10003;</span
+                  >
+                  <span class="text-slate-700"
+                    >Full system test, live activation, and customer walkthrough
+                    &amp; handover</span
+                  >
+                </li>
+              </ul>
+              <div
+                class="mt-6 inline-flex items-center gap-2 rounded-full bg-emerald-50 border border-emerald-200 px-4 py-2 text-sm text-emerald-800 font-semibold w-fit"
+              >
+                &#9201; Typical Duration: 1 Day
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -- Summary Timeline Strip -- -->
+      <section class="py-14 md:py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-center text-3xl font-extrabold text-emerald-950 mb-10"
+          >
+            End-to-End Timeline
+          </h2>
+          <div class="relative grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div
+              class="rounded-2xl bg-white border border-emerald-100 shadow-sm p-5 text-center hover:shadow-md transition-all"
+            >
+              <div class="text-3xl mb-2">&#128204;</div>
+              <p class="font-bold text-emerald-900 text-sm">
+                Assessment &amp; Planning
+              </p>
+              <p class="text-xs text-slate-500 mt-1">1-2 Days</p>
+            </div>
+            <div
+              class="rounded-2xl bg-white border border-sky-100 shadow-sm p-5 text-center hover:shadow-md transition-all"
+            >
+              <div class="text-3xl mb-2">&#128204;</div>
+              <p class="font-bold text-sky-900 text-sm">Approvals &amp; Docs</p>
+              <p class="text-xs text-slate-500 mt-1">5-15 Days</p>
+            </div>
+            <div
+              class="rounded-2xl bg-white border border-yellow-100 shadow-sm p-5 text-center hover:shadow-md transition-all"
+            >
+              <div class="text-3xl mb-2">&#128204;</div>
+              <p class="font-bold text-yellow-900 text-sm">Installation</p>
+              <p class="text-xs text-slate-500 mt-1">1-3 Days</p>
+            </div>
+            <div
+              class="rounded-2xl bg-white border border-emerald-100 shadow-sm p-5 text-center hover:shadow-md transition-all"
+            >
+              <div class="text-3xl mb-2">&#9889;</div>
+              <p class="font-bold text-emerald-900 text-sm">
+                Testing &amp; Activation
+              </p>
+              <p class="text-xs text-slate-500 mt-1">1 Day</p>
+            </div>
+          </div>
+          <p class="text-center text-slate-500 text-sm mt-6">
+            Total estimated time:
+            <strong class="text-emerald-800">8-21 Days</strong> from site visit
+            to activation
+          </p>
+        </div>
+      </section>
+
+      <!-- -- CTA -- -->
+      <section class="py-14 md:py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="rounded-3xl bg-gradient-to-br from-emerald-700 to-sky-700 text-white p-8 sm:p-10 text-center relative overflow-hidden shadow-xl"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1100&q=80"
+              alt=""
+              class="absolute inset-0 h-full w-full object-cover opacity-15"
+            />
+            <div class="relative z-10">
+              <h2 class="text-2xl sm:text-3xl font-extrabold">
+                Ready to Go Solar?
+              </h2>
+              <p
+                class="mt-3 text-emerald-100 text-base leading-relaxed max-w-xl mx-auto"
+              >
+                Contact us today for a free site assessment and personalised
+                quote. Our team is ready to guide you through every step.
+              </p>
+              <div class="mt-7 flex flex-wrap gap-3 justify-center">
+                <a
+                  href="contact.html"
+                  class="rounded-full bg-white text-emerald-800 hover:bg-emerald-50 px-7 py-3 font-semibold shadow transition-all"
+                  >Book Free Assessment</a
+                >
+                <a
+                  href="see-your-savings.html"
+                  class="rounded-full border border-white/50 hover:bg-white/10 text-white px-7 py-3 font-semibold transition-all"
+                  >Estimate Cost</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- -- Footer -- -->
+    <footer class="bg-emerald-950 text-emerald-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="brand-font text-xl">Kalinga GreenTech</h3>
+            <p class="mt-3 text-sm text-emerald-200">
+              Electrical Contractor & Solar Installer serving homes, businesses,
+              and institutions.
+            </p>
+          </div>
+          <div>
+            <p class="text-sm uppercase tracking-wide text-emerald-300">
+              Quick Links
+            </p>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li>
+                <a href="our-story.html" class="hover:text-white">Our Story</a>
+              </li>
+              <li>
+                <a href="services.html" class="hover:text-white"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a href="why-choose-us.html" class="hover:text-white"
+                  >Why Choose Us</a
+                >
+              </li>
+              <li>
+                <a href="see-your-savings.html" class="hover:text-white"
+                  >See Your Savings</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-sm uppercase tracking-wide text-emerald-300">
+              Contact
+            </p>
+            <ul class="mt-3 space-y-2 text-sm text-emerald-200">
+              <li data-site-phone>+91 7735732388</li>
+              <li data-site-email>kalingagreentech@gmail.com</li>
+              <li data-site-address>Nandan Vihar, Bhubaneswar, India</li>
+            </ul>
+          </div>
+        </div>
+        <p
+          class="mt-8 pt-6 border-t border-emerald-800 text-xs text-emerald-300"
+        >
+          Kalinga GreenTech ?,? 2026. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const trackerButtons = Array.from(
+          document.querySelectorAll("#stepsTracker [data-step-target]"),
+        );
+        const stepCards = Array.from(
+          document.querySelectorAll(".step-card[data-step]"),
+        );
+
+        if (!trackerButtons.length || !stepCards.length) {
+          return;
+        }
+
+        function setActive(stepId) {
+          trackerButtons.forEach(function (button) {
+            const isActive = button.dataset.stepTarget === stepId;
+            button.classList.toggle("active", isActive);
+          });
+        }
+
+        trackerButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            const targetId = button.dataset.stepTarget;
+            const target = document.getElementById(targetId);
+
+            if (!target) {
+              return;
+            }
+
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            setActive(targetId);
+          });
+        });
+
+        const observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                setActive(entry.target.dataset.step);
+              }
+            });
+          },
+          {
+            root: null,
+            rootMargin: "-35% 0px -45% 0px",
+            threshold: 0.1,
+          },
+        );
+
+        stepCards.forEach(function (card) {
+          observer.observe(card);
+        });
+      })();
+    </script>
+    <script>
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuIconOpen = document.getElementById("menuIconOpen");
+      const menuIconClose = document.getElementById("menuIconClose");
+
+      if (mobileMenuBtn && mobileMenu && menuIconOpen && menuIconClose) {
+        mobileMenuBtn.addEventListener("click", function () {
+          const isHidden = mobileMenu.classList.contains("hidden");
+          mobileMenu.classList.toggle("hidden", !isHidden);
+          menuIconOpen.classList.toggle("hidden", isHidden);
+          menuIconClose.classList.toggle("hidden", !isHidden);
+          mobileMenuBtn.setAttribute("aria-expanded", String(isHidden));
+        });
+      }
+    </script>
+  <a
+  class="whatsapp-float-btn"
+  href="https://wa.me/917735732388?text=Hello%20Kalinga%20GreenTech%20Ltd.,%20I%20need%20assistance."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+>
+  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+    <path
+      fill="currentColor"
+      d="M13.601 2.326A7.854 7.854 0 0 0 8.001 0C3.58 0 0 3.58 0 8a7.9 7.9 0 0 0 1.153 4.115L0 16l3.993-1.128A7.95 7.95 0 0 0 8 16h.003c4.42 0 8-3.58 8-8a7.95 7.95 0 0 0-2.402-5.674m-5.6 12.325h-.003a6.6 6.6 0 0 1-3.36-.92l-.24-.144-2.37.67.633-2.31-.156-.237a6.58 6.58 0 0 1-1.015-3.507C1.49 4.51 4.51 1.49 8.001 1.49c1.76 0 3.418.686 4.662 1.93A6.58 6.58 0 0 1 14.513 8c0 3.692-3.02 6.651-6.512 6.651m3.615-4.995c-.198-.099-1.173-.579-1.354-.645s-.313-.099-.446.1-.512.644-.628.777-.231.148-.429.05c-.197-.099-.833-.307-1.587-.98-.586-.522-.98-1.166-1.095-1.364s-.012-.304.087-.402c.09-.089.198-.232.297-.347.099-.116.132-.198.198-.33.066-.132.033-.248-.017-.347-.05-.099-.446-1.076-.611-1.473-.161-.387-.324-.334-.446-.34l-.38-.007a.73.73 0 0 0-.529.248c-.182.198-.694.678-.694 1.653s.71 1.918.81 2.05c.099.133 1.4 2.137 3.394 2.996.474.205.843.327 1.132.418.476.152.908.131 1.25.08.381-.057 1.173-.479 1.338-.942.165-.462.165-.859.116-.942-.05-.083-.182-.132-.38-.231"
+    />
+  </svg>
+  <span class="sr-only">WhatsApp</span>
+</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

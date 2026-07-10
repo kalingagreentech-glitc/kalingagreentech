@@ -1,0 +1,1141 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>
+      Kalinga GreenTech | Electrical Contractor & Solar Installer
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
+
+      :root {
+        --forest: #073a2a;
+        --leaf: #0f9f67;
+        --sky: #0b78d1;
+        --sun: #f5b90a;
+        --paper: #f4fbf7;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Manrope", sans-serif;
+        color: #1f3b31;
+        background: radial-gradient(
+            circle at 8% 0%,
+            rgba(15, 159, 103, 0.2),
+            transparent 36%
+          ),
+          radial-gradient(
+            circle at 90% 2%,
+            rgba(11, 120, 209, 0.18),
+            transparent 34%
+          ),
+          radial-gradient(
+            circle at 52% 20%,
+            rgba(245, 185, 10, 0.12),
+            transparent 28%
+          ),
+          linear-gradient(180deg, #f6fcf8 0%, #ffffff 45%, #edf9f1 100%);
+      }
+
+      h1,
+      h2,
+      h3,
+      .brand-font {
+        font-family: "Sora", sans-serif;
+      }
+
+      .section-title {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+        font-weight: 800;
+        color: var(--forest);
+      }
+
+      @media (min-width: 768px) {
+        .section-title {
+          font-size: 2.25rem;
+          line-height: 2.5rem;
+        }
+      }
+
+      .hero-slider {
+        position: relative;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        min-height: 420px;
+      }
+
+      @media (max-width: 1024px) {
+        .hero-slider {
+          min-height: 360px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero-slider {
+          min-height: 290px;
+        }
+
+        #heroPrev,
+        #heroNext {
+          display: none;
+        }
+
+        .hero-dot {
+          width: 11px;
+          height: 11px;
+        }
+      }
+
+      .hero-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.7s ease;
+        pointer-events: none;
+      }
+
+      .hero-slide.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .hero-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.5);
+        transition:
+          background 0.25s,
+          transform 0.25s;
+        cursor: pointer;
+        border: none;
+        padding: 0;
+      }
+
+      .hero-dot.active {
+        background: #ffffff;
+        transform: scale(1.25);
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.86);
+        backdrop-filter: blur(8px);
+      }
+
+      .image-tint::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(7, 58, 42, 0) 50%,
+          rgba(7, 58, 42, 0.48) 100%
+        );
+        pointer-events: none;
+      }
+    </style>
+  <style>
+  .whatsapp-float-btn {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 9999px;
+    background: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .whatsapp-float-btn svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
+
+  .whatsapp-float-btn:hover {
+    background: #1fb858;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.26);
+  }
+
+  .whatsapp-float-btn:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+
+  .whatsapp-float-btn .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (max-width: 640px) {
+    .whatsapp-float-btn {
+      right: 12px;
+      bottom: 12px;
+      width: 52px;
+      height: 52px;
+    }
+
+    .whatsapp-float-btn svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+</style>
+<style>
+  /* site-responsive-helper-v1 */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
+  }
+  /* site-fixed-header-all-devices */
+  header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 60;
+  }
+
+  body {
+    padding-top: 4rem;
+  }
+
+  @media (max-width: 1024px) {
+    .whatsapp-float-btn {
+      right: 14px;
+      bottom: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .whatsapp-float-btn {
+      right: 12px;
+      bottom: 12px;
+    }
+  }
+</style>
+    <script src="site-meta.js"></script>
+    <script src="site-meta-loader.js" defer></script>
+</head>
+  <body class="antialiased">
+    <header
+      class="sticky top-0 z-50 bg-white/92 backdrop-blur border-b border-emerald-100/80"
+    >
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="h-16 flex items-center justify-between">
+          <a
+            href="index.html"
+            class="transition-all duration-300 hover:scale-105 hover:opacity-80 inline-flex items-center gap-2"
+          >
+            <img
+              src="Designer.png"
+              alt="Kalinga GreenTech"
+              class="h-12 sm:h-14 lg:h-16 w-auto object-contain drop-shadow-sm transition-all duration-300"
+            />
+            <span
+              class="brand-font text-base sm:text-lg font-bold text-emerald-800 leading-tight"
+              >Kalinga GreenTech</span
+            >
+          </a>
+
+          <ul
+            class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700"
+          >
+            <li>
+              <a href="index.html" class="text-emerald-700 transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="our-story.html"
+                class="hover:text-emerald-700 transition-colors"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a
+                href="services.html"
+                class="hover:text-emerald-700 transition-colors"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="why-choose-us.html"
+                class="hover:text-emerald-700 transition-colors"
+                >Why Choose Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="see-your-savings.html"
+                class="hover:text-emerald-700 transition-colors"
+                >See Savings</a
+              >
+            </li>
+            <li>
+              <a
+                href="installation-process.html"
+                class="hover:text-emerald-700 transition-colors"
+                >Installation</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="hover:text-emerald-700 transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <button
+            id="mobileMenuBtn"
+            type="button"
+            class="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-xl border border-emerald-200/90 bg-white text-emerald-800 shadow-sm hover:bg-emerald-50 active:scale-95 transition-all duration-200"
+            aria-label="Open menu"
+            aria-controls="mobileMenu"
+            aria-expanded="false"
+          >
+            <svg
+              id="menuIconOpen"
+              viewBox="0 0 24 24"
+              class="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg
+              id="menuIconClose"
+              viewBox="0 0 24 24"
+              class="hidden h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg></button
+          ><a
+            href="see-your-savings.html"
+            class="hidden sm:inline-flex items-center rounded-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 text-sm font-semibold shadow-sm transition-all"
+            >Free Estimate</a
+          >
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden pb-3 pt-2">
+          <ul
+            class="grid gap-2 text-sm font-semibold text-slate-700 rounded-2xl border border-emerald-100 bg-white/95 p-2 shadow-lg backdrop-blur"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="our-story.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a
+                href="services.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="why-choose-us.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Why Choose Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="see-your-savings.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >See Savings</a
+              >
+            </li>
+            <li>
+              <a
+                href="installation-process.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Installation</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="pt-14 pb-16 md:pt-20 md:pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <p
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm font-semibold"
+              >
+                <span>&#9728;</span>
+                Serving Homes, Businesses & Institutions
+              </p>
+              <h1
+                class="mt-5 text-4xl sm:text-5xl lg:text-5.75xl font-extrabold leading-tight text-emerald-950"
+              >
+                Turn Sunshine Into Savings With Trusted Solar Experts
+              </h1>
+              <p class="mt-5 text-lg text-slate-600 max-w-xl leading-relaxed">
+                Electrical contractor and solar installer delivering complete
+                planning, approvals, installation, and long-term support for
+                reliable clean energy systems.
+              </p>
+              <div class="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="see-your-savings.html"
+                  class="inline-flex items-center rounded-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 font-semibold shadow-md hover:shadow-lg transition-all"
+                  >Calculate Your Savings</a
+                >
+                <a
+                  href="contact.html"
+                  class="inline-flex items-center rounded-full border border-emerald-300 hover:border-emerald-500 bg-white px-6 py-3 font-semibold text-emerald-800 transition-all"
+                  >Book Free Site Visit</a
+                >
+              </div>
+
+              <div class="mt-7 grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl">
+                <div
+                  class="rounded-xl bg-white border border-emerald-100 p-3 shadow-sm"
+                >
+                  <p class="text-xs text-slate-500">Solar Systems Installed</p>
+                  <p class="brand-font text-lg text-emerald-800">900+</p>
+                </div>
+                <div
+                  class="rounded-xl bg-white border border-emerald-100 p-3 shadow-sm"
+                >
+                  <p class="text-xs text-slate-500">Megawatts Installed</p>
+                  <p class="brand-font text-lg text-emerald-800">28.3+</p>
+                </div>
+                <div
+                  class="rounded-xl bg-white border border-emerald-100 p-3 shadow-sm col-span-2 sm:col-span-1"
+                >
+                  <p class="text-xs text-slate-500">Service Hours</p>
+                  <p class="brand-font text-lg text-emerald-800">9am-6pm</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div
+                class="absolute -inset-4 bg-gradient-to-r from-emerald-300/50 via-yellow-200/50 to-blue-300/40 blur-2xl rounded-3xl"
+              ></div>
+              <div
+                class="relative glass-card rounded-3xl p-4 sm:p-5 border border-white/70 shadow-xl"
+              >
+                <div id="heroSlider" class="hero-slider image-tint">
+                  <div class="hero-slide active">
+                    <img
+                      src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1500&q=80"
+                      alt="Large scale solar installation"
+                      class="h-full w-full object-cover"
+                    />
+                    <p
+                      class="absolute bottom-12 left-4 text-white text-sm sm:text-base font-semibold z-10"
+                    >
+                      Power your future with solar
+                    </p>
+                  </div>
+                  <div class="hero-slide">
+                    <img
+                      src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1500&q=80"
+                      alt="Rooftop panel installation"
+                      class="h-full w-full object-cover"
+                    />
+                    <p
+                      class="absolute bottom-12 left-4 text-white text-sm sm:text-base font-semibold z-10"
+                    >
+                      Engineered rooftop systems
+                    </p>
+                  </div>
+                  <div class="hero-slide">
+                    <img
+                      src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1500&q=80"
+                      alt="Modern house using renewable energy"
+                      class="h-full w-full object-cover"
+                    />
+                    <p
+                      class="absolute bottom-12 left-4 text-white text-sm sm:text-base font-semibold z-10"
+                    >
+                      Save more every month
+                    </p>
+                  </div>
+
+                  <button
+                    id="heroPrev"
+                    type="button"
+                    aria-label="Previous"
+                    class="absolute left-3 top-1/2 -translate-y-1/2 z-20 h-9 w-9 rounded-full bg-white/80 hover:bg-white text-emerald-900 font-bold text-lg shadow flex items-center justify-center transition-all"
+                  >
+                    &#8249;
+                  </button>
+                  <button
+                    id="heroNext"
+                    type="button"
+                    aria-label="Next"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 z-20 h-9 w-9 rounded-full bg-white/80 hover:bg-white text-emerald-900 font-bold text-lg shadow flex items-center justify-center transition-all"
+                  >
+                    &#8250;
+                  </button>
+
+                  <div
+                    id="heroDots"
+                    class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2"
+                  >
+                    <button
+                      type="button"
+                      class="hero-dot active"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      class="hero-dot"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      class="hero-dot"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-20 lg:pt-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-wrap items-end justify-between gap-4 mb-10">
+            <div>
+              <h2 class="section-title">Who We Serve</h2>
+              <p class="mt-2 text-slate-600">
+                Tailored solar systems for every energy profile.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <article
+              class="rounded-2xl bg-white border border-emerald-100 shadow-sm hover:shadow-lg transition-all overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1000&q=80"
+                alt="Residential solar"
+                class="h-44 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-semibold text-emerald-950">Homes</h3>
+                <p class="mt-2 text-sm text-slate-600">
+                  Lower monthly bills with rooftop systems designed for family
+                  usage patterns.
+                </p>
+              </div>
+            </article>
+            <article
+              class="rounded-2xl bg-white border border-emerald-100 shadow-sm hover:shadow-lg transition-all overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1000&q=80"
+                alt="Business solar"
+                class="h-44 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-semibold text-emerald-950">
+                  Businesses & Farms
+                </h3>
+                <p class="mt-2 text-sm text-slate-600">
+                  Improve cost predictability and reduce long-term operating
+                  expenses.
+                </p>
+              </div>
+            </article>
+            <article
+              class="rounded-2xl bg-white border border-emerald-100 shadow-sm hover:shadow-lg transition-all overflow-hidden"
+            >
+              <img
+                src="Designer (1).png"
+                alt="School solar"
+                class="h-44 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-semibold text-emerald-950">
+                  Schools & Non-Profits
+                </h3>
+                <p class="mt-2 text-sm text-slate-600">
+                  Deploy sustainable infrastructure while reallocating budgets
+                  to core missions.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="py-16 md:py-20 bg-emerald-50/55 border-y border-emerald-100"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="section-title">Solar Benefits</h2>
+          <p class="mt-3 text-slate-600 max-w-2xl">
+            Turn sunshine into savings, energy independence, and environmental
+            impact.
+          </p>
+
+          <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div
+              class="rounded-2xl bg-white border border-emerald-100 p-5 shadow-sm"
+            >
+              <p class="text-2xl">&#127969;</p>
+              <h3 class="mt-2 font-bold text-emerald-900">
+                Increase Property Value
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Solar-ready properties attract better long-term market interest.
+              </p>
+            </div>
+            <div
+              class="rounded-2xl bg-white border border-emerald-100 p-5 shadow-sm"
+            >
+              <p class="text-2xl">&#128184;</p>
+              <h3 class="mt-2 font-bold text-emerald-900">
+                Lower Energy Bills
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Save money every month with self-generated power.
+              </p>
+            </div>
+            <div
+              class="rounded-2xl bg-white border border-emerald-100 p-5 shadow-sm"
+            >
+              <p class="text-2xl">&#9889;</p>
+              <h3 class="mt-2 font-bold text-emerald-900">Reliable Energy</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Pair with backup options for better energy resilience.
+              </p>
+            </div>
+            <div
+              class="rounded-2xl bg-white border border-emerald-100 p-5 shadow-sm"
+            >
+              <p class="text-2xl">&#127793;</p>
+              <h3 class="mt-2 font-bold text-emerald-900">
+                Sustainable Choice
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Reduce carbon footprint and support cleaner communities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-wrap items-end justify-between gap-4 mb-10">
+            <div>
+              <h2 class="section-title">Solar Products</h2>
+              <p class="mt-2 text-slate-600">
+                Explore residential and commercial-ready packages.
+              </p>
+            </div>
+            <a
+              href="services.html"
+              class="inline-flex items-center rounded-full border border-emerald-300 hover:border-emerald-500 px-5 py-2.5 font-semibold text-emerald-800"
+              >See All Services</a
+            >
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article
+              class="rounded-2xl bg-white border border-emerald-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80"
+                alt="Solar Panel"
+                class="h-44 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-semibold text-emerald-950">
+                  Solar Panel
+                </h3>
+                <p class="mt-1 text-sm text-sky-700 font-medium">
+                  High Efficiency
+                </p>
+                <p class="mt-3 text-slate-600 text-sm">
+                  Durable solar modules designed for homes and commercial
+                  rooftops.
+                </p>
+                <p class="mt-4 font-bold text-emerald-600">
+                  Starting from &#8377;10,000
+                </p>
+                <a
+                  href="ecopanel-basic.html"
+                  class="mt-4 inline-flex items-center rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 transition-all"
+                  >View Details</a
+                >
+              </div>
+            </article>
+
+            <article
+              class="rounded-2xl bg-white border border-emerald-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80"
+                alt="Inverter"
+                class="h-44 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-semibold text-emerald-950">Inverter</h3>
+                <p class="mt-1 text-sm text-sky-700 font-medium">
+                  Smart Conversion
+                </p>
+                <p class="mt-3 text-slate-600 text-sm">
+                  Efficient inverter systems for stable power conversion and
+                  backup integration.
+                </p>
+                <p class="mt-4 font-bold text-emerald-600">
+                  Starting from &#8377;19,000
+                </p>
+                <a
+                  href="inverter-system.html"
+                  class="mt-4 inline-flex items-center rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 transition-all"
+                  >View Details</a
+                >
+              </div>
+            </article>
+
+            <article
+              class="rounded-2xl bg-white border border-emerald-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80"
+                alt="Battery"
+                class="h-44 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-semibold text-emerald-950">Battery</h3>
+                <p class="mt-1 text-sm text-sky-700 font-medium">
+                  Energy Storage
+                </p>
+                <p class="mt-3 text-slate-600 text-sm">
+                  Reliable storage batteries to keep your essential load running
+                  during outages.
+                </p>
+                <p class="mt-4 font-bold text-emerald-600">
+                  Starting from &#8377;36,000
+                </p>
+                <a
+                  href="battery-storage.html"
+                  class="mt-4 inline-flex items-center rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 transition-all"
+                  >View Details</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-20">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8"
+        >
+          <article
+            class="rounded-3xl bg-white border border-emerald-100 shadow-sm p-7"
+          >
+            <p
+              class="text-xs uppercase tracking-wider text-emerald-600 font-semibold"
+            >
+              Highest Certification
+            </p>
+            <h3 class="mt-3 text-2xl font-bold text-emerald-950">
+              Professional Standards In Every Project
+            </h3>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              Our teams follow strict technical and safety workflows, with
+              transparent execution from first site survey to commissioning and
+              support.
+            </p>
+            <a
+              href="why-choose-us.html"
+              class="mt-5 inline-flex items-center rounded-full border border-emerald-300 hover:border-emerald-500 px-5 py-2.5 font-semibold text-emerald-800"
+              >Why Choose Us</a
+            >
+          </article>
+
+          <article
+            class="rounded-3xl bg-white border border-emerald-100 shadow-sm p-7"
+          >
+            <p
+              class="text-xs uppercase tracking-wider text-emerald-600 font-semibold"
+            >
+              Powered By Trust
+            </p>
+            <blockquote class="mt-3 text-slate-700 leading-relaxed">
+              "Your crew was friendly, polite, and efficient. Everyone
+              introduced themselves and kept us informed. That professionalism
+              is rare."
+            </blockquote>
+            <p class="mt-3 text-sm font-semibold text-emerald-800">
+              - Customer Feedback
+            </p>
+            <div class="mt-6 grid grid-cols-2 gap-3 text-sm font-semibold">
+              <a
+                href="our-story.html"
+                class="rounded-xl border border-emerald-200 px-4 py-2.5 hover:bg-emerald-50"
+                >Our Story</a
+              >
+              <a
+                href="services.html"
+                class="rounded-xl border border-emerald-200 px-4 py-2.5 hover:bg-emerald-50"
+                >Our Services</a
+              >
+              <a
+                href="why-choose-us.html"
+                class="rounded-xl border border-emerald-200 px-4 py-2.5 hover:bg-emerald-50"
+                >Why Choose Us</a
+              >
+              <a
+                href="see-your-savings.html"
+                class="rounded-xl border border-emerald-200 px-4 py-2.5 hover:bg-emerald-50"
+                >Calculate Savings</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="pb-16 md:pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="rounded-3xl bg-gradient-to-r from-emerald-700 via-emerald-600 to-sky-700 text-white shadow-xl p-8 sm:p-10 lg:p-12"
+          >
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <p
+                  class="text-xs uppercase tracking-wider text-emerald-100 font-semibold"
+                >
+                  Get Started
+                </p>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold">
+                  See Your Savings In Less Than A Minute
+                </h2>
+                <p class="mt-3 text-emerald-50">
+                  Use our INR calculator to estimate investment and pick the
+                  best system size for your needs.
+                </p>
+              </div>
+              <div class="flex lg:justify-end">
+                <a
+                  href="see-your-savings.html"
+                  class="inline-flex items-center rounded-full bg-white text-emerald-700 hover:text-emerald-800 px-7 py-3 font-bold shadow-md transition-all"
+                  >Open Savings Calculator</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative bg-gradient-to-b from-emerald-950 via-emerald-900 to-slate-900 text-emerald-100 overflow-hidden">
+      <!-- Animated background elements -->
+      <div class="absolute top-0 left-0 w-96 h-96 bg-emerald-800/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-sky-800/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+        <!-- Top Section with Newsletter -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12 pb-8 border-b border-emerald-800/50">
+          <div class="footer-section">
+            <h3 class="brand-font text-2xl font-bold text-emerald-300 mb-3">Kalinga GreenTech</h3>
+            <p class="text-sm text-emerald-200 mb-6 leading-relaxed max-w-sm">
+              Trusted solar &amp; electrical contractor serving homes, businesses, and institutions across India with innovative green energy solutions.
+            </p>
+            <!-- Social Links -->
+            <div class="flex gap-4">
+              <a href="#" class="social-icon group" title="Facebook">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="#" class="social-icon group" title="Twitter">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 002.856-3.515 10 10 0 01-2.856.974 4.978 4.978 0 00-8.86 4.543c-4.332-.073-8.164-2.294-10.738-5.47a4.978 4.978 0 001.54 6.659 4.931 4.931 0 01-2.254-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 19.54a13.994 13.994 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+              <a href="#" class="social-icon group" title="LinkedIn">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="text-lg font-bold text-emerald-300 mb-4">Newsletter</h4>
+            <p class="text-sm text-emerald-200 mb-4">Get solar energy tips and updates delivered to your inbox</p>
+            <form class="flex flex-col gap-3" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                class="px-4 py-2 rounded-lg bg-emerald-900/50 border border-emerald-700 text-white placeholder-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all"
+                required
+              />
+              <button 
+                type="submit"
+                class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all hover:shadow-lg hover:shadow-emerald-500/50"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="grid md:grid-cols-3 gap-12 pb-8 border-b border-emerald-800/50">
+          <!-- Company Info -->
+          <div class="footer-section">
+            <h3 class="text-sm uppercase tracking-wide text-emerald-400 font-semibold mb-4">About</h3>
+            <ul class="space-y-3">
+              <li><a href="our-story.html" class="footer-link text-emerald-200">Our Story</a></li>
+              <li><a href="services.html" class="footer-link text-emerald-200">Services</a></li>
+              <li><a href="why-choose-us.html" class="footer-link text-emerald-200">Why Choose Us</a></li>
+              <li><a href="installation-process.html" class="footer-link text-emerald-200">Installation</a></li>
+            </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h3 class="text-sm uppercase tracking-wide text-emerald-400 font-semibold mb-4">Resources</h3>
+            <ul class="space-y-3">
+              <li><a href="see-your-savings.html" class="footer-link text-emerald-200">See Your Savings</a></li>
+              <li><a href="index.html" class="footer-link text-emerald-200">Home</a></li>
+              <li><a href="contact.html" class="footer-link text-emerald-200">Contact Us</a></li>
+              <li><a href="#" class="footer-link text-emerald-200">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-section">
+            <h3 class="text-sm uppercase tracking-wide text-emerald-400 font-semibold mb-4">Contact Info</h3>
+            <ul class="space-y-3 text-emerald-200 text-sm">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773c.346 1.034.92 2.378 1.996 3.454 1.076 1.076 2.42 1.65 3.454 1.996l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.387 18 3 13.613 3 8V3z"></path>
+                </svg>
+                <span data-site-phone>+91 7735732388</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <span data-site-email>kalingagreentech@gmail.com</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                <span data-site-address>Nandan Vihar, Bhubaneswar, India</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-xs text-emerald-300">
+            © <span class="font-semibold">2026 Kalinga GreenTech Ltd.</span> All rights reserved.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-xs text-emerald-300 hover:text-emerald-200 transition-colors">Privacy</a>
+            <span class="text-emerald-700">•</span>
+            <a href="#" class="text-xs text-emerald-300 hover:text-emerald-200 transition-colors">Terms</a>
+            <span class="text-emerald-700">•</span>
+            <a href="#" class="text-xs text-emerald-300 hover:text-emerald-200 transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var slider = document.getElementById("heroSlider");
+        if (!slider) return;
+
+        var slides = Array.from(slider.querySelectorAll(".hero-slide"));
+        var dots = Array.from(slider.querySelectorAll(".hero-dot"));
+        var prev = document.getElementById("heroPrev");
+        var next = document.getElementById("heroNext");
+        var current = 0;
+        var timer;
+        var touchStartX = 0;
+        var touchEndX = 0;
+
+        function goTo(index) {
+          slides[current].classList.remove("active");
+          dots[current].classList.remove("active");
+          current = (index + slides.length) % slides.length;
+          slides[current].classList.add("active");
+          dots[current].classList.add("active");
+        }
+
+        function startAuto() {
+          clearInterval(timer);
+          timer = setInterval(function () {
+            goTo(current + 1);
+          }, 4000);
+        }
+
+        if (prev) {
+          prev.addEventListener("click", function () {
+            goTo(current - 1);
+            startAuto();
+          });
+        }
+
+        if (next) {
+          next.addEventListener("click", function () {
+            goTo(current + 1);
+            startAuto();
+          });
+        }
+
+        dots.forEach(function (dot, i) {
+          dot.addEventListener("click", function () {
+            goTo(i);
+            startAuto();
+          });
+        });
+
+        slider.addEventListener(
+          "touchstart",
+          function (event) {
+            touchStartX = event.changedTouches[0].clientX;
+          },
+          { passive: true },
+        );
+
+        slider.addEventListener(
+          "touchend",
+          function (event) {
+            touchEndX = event.changedTouches[0].clientX;
+            var deltaX = touchEndX - touchStartX;
+
+            if (Math.abs(deltaX) < 40) return;
+
+            if (deltaX < 0) {
+              goTo(current + 1);
+            } else {
+              goTo(current - 1);
+            }
+
+            startAuto();
+          },
+          { passive: true },
+        );
+
+        document.addEventListener("visibilitychange", function () {
+          if (document.hidden) {
+            clearInterval(timer);
+          } else {
+            startAuto();
+          }
+        });
+
+        startAuto();
+      })();
+    </script>
+    <script>
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuIconOpen = document.getElementById("menuIconOpen");
+      const menuIconClose = document.getElementById("menuIconClose");
+
+      if (mobileMenuBtn && mobileMenu && menuIconOpen && menuIconClose) {
+        mobileMenuBtn.addEventListener("click", function () {
+          const isHidden = mobileMenu.classList.contains("hidden");
+          mobileMenu.classList.toggle("hidden", !isHidden);
+          menuIconOpen.classList.toggle("hidden", isHidden);
+          menuIconClose.classList.toggle("hidden", !isHidden);
+          mobileMenuBtn.setAttribute("aria-expanded", String(isHidden));
+        });
+      }
+    </script>
+  <a
+  class="whatsapp-float-btn"
+  href="https://wa.me/917735732388?text=Hello%20Kalinga%20GreenTech%20Ltd.,%20I%20need%20assistance."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+>
+  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+    <path
+      fill="currentColor"
+      d="M13.601 2.326A7.854 7.854 0 0 0 8.001 0C3.58 0 0 3.58 0 8a7.9 7.9 0 0 0 1.153 4.115L0 16l3.993-1.128A7.95 7.95 0 0 0 8 16h.003c4.42 0 8-3.58 8-8a7.95 7.95 0 0 0-2.402-5.674m-5.6 12.325h-.003a6.6 6.6 0 0 1-3.36-.92l-.24-.144-2.37.67.633-2.31-.156-.237a6.58 6.58 0 0 1-1.015-3.507C1.49 4.51 4.51 1.49 8.001 1.49c1.76 0 3.418.686 4.662 1.93A6.58 6.58 0 0 1 14.513 8c0 3.692-3.02 6.651-6.512 6.651m3.615-4.995c-.198-.099-1.173-.579-1.354-.645s-.313-.099-.446.1-.512.644-.628.777-.231.148-.429.05c-.197-.099-.833-.307-1.587-.98-.586-.522-.98-1.166-1.095-1.364s-.012-.304.087-.402c.09-.089.198-.232.297-.347.099-.116.132-.198.198-.33.066-.132.033-.248-.017-.347-.05-.099-.446-1.076-.611-1.473-.161-.387-.324-.334-.446-.34l-.38-.007a.73.73 0 0 0-.529.248c-.182.198-.694.678-.694 1.653s.71 1.918.81 2.05c.099.133 1.4 2.137 3.394 2.996.474.205.843.327 1.132.418.476.152.908.131 1.25.08.381-.057 1.173-.479 1.338-.942.165-.462.165-.859.116-.942-.05-.083-.182-.132-.38-.231"
+    />
+  </svg>
+  <span class="sr-only">WhatsApp</span>
+</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,823 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Contact | Kalinga GreenTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
+      body {
+        font-family: "Manrope", sans-serif;
+        background: linear-gradient(
+          180deg,
+          #f6fcf8 0%,
+          #ffffff 45%,
+          #edf9f1 100%
+        );
+        color: #1f3b31;
+      }
+      h1,
+      h2,
+      h3,
+      .brand-font {
+        font-family: "Sora", sans-serif;
+      }
+    </style>
+  <style>
+  .whatsapp-float-btn {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 9999px;
+    background: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .whatsapp-float-btn svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
+
+  .whatsapp-float-btn:hover {
+    background: #1fb858;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.26);
+  }
+
+  .whatsapp-float-btn:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+
+  .whatsapp-float-btn .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (max-width: 640px) {
+    .whatsapp-float-btn {
+      right: 12px;
+      bottom: 12px;
+      width: 52px;
+      height: 52px;
+    }
+
+    .whatsapp-float-btn svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+</style>
+<style>
+  /* site-responsive-helper-v1 */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
+  }
+  /* site-fixed-header-all-devices */
+  header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 60;
+  }
+
+  body {
+    padding-top: 4rem;
+  }
+
+  @media (max-width: 1024px) {
+    .whatsapp-float-btn {
+      right: 14px;
+      bottom: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .whatsapp-float-btn {
+      right: 12px;
+      bottom: 12px;
+    }
+  }
+
+  /* Footer Animations */
+  @keyframes float-up {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes slide-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(16, 185, 129, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+    }
+  }
+
+  .footer-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #10b981;
+    transition: width 0.3s ease;
+  }
+
+  .footer-link:hover::after {
+    width: 100%;
+  }
+
+  .footer-link:hover {
+    color: #ffffff;
+  }
+
+  .footer-section {
+    animation: slide-in-up 0.6s ease-out forwards;
+  }
+
+  .footer-section:nth-child(1) { animation-delay: 0.1s; }
+  .footer-section:nth-child(2) { animation-delay: 0.2s; }
+  .footer-section:nth-child(3) { animation-delay: 0.3s; }
+
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    transition: all 0.3s ease;
+    animation: float-up 3s ease-in-out infinite;
+  }
+
+  .social-icon:hover {
+    background-color: #10b981;
+    color: #ffffff;
+    transform: scale(1.1);
+  }
+
+  .social-icon:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .social-icon:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+</style>
+    <script src="site-meta.js"></script>
+    <script src="site-meta-loader.js" defer></script>
+</head>
+  <body class="antialiased">
+    <header
+      class="sticky top-0 z-50 bg-white/92 backdrop-blur border-b border-emerald-100/80"
+    >
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="h-16 flex items-center justify-between">
+          <a href="index.html" class="inline-flex items-center gap-2">
+            <img
+              src="Designer.png"
+              alt="Kalinga GreenTech"
+              class="h-12 sm:h-14 lg:h-16 w-auto object-contain"
+            />
+            <span
+              class="brand-font text-base sm:text-lg font-bold text-emerald-800"
+              >Kalinga GreenTech</span
+            >
+          </a>
+          <ul
+            class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700"
+          >
+            <li>
+              <a href="index.html" class="hover:text-emerald-700">Home</a>
+            </li>
+            <li>
+              <a href="our-story.html" class="hover:text-emerald-700"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a href="services.html" class="hover:text-emerald-700"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="why-choose-us.html" class="hover:text-emerald-700"
+                >Why Choose Us</a
+              >
+            </li>
+            <li>
+              <a href="see-your-savings.html" class="hover:text-emerald-700"
+                >See Savings</a
+              >
+            </li>
+            <li>
+              <a href="installation-process.html" class="hover:text-emerald-700"
+                >Installation</a
+              >
+            </li>
+            <li><a href="contact.html" class="text-emerald-700">Contact</a></li>
+          </ul>
+          <button
+            id="mobileMenuBtn"
+            type="button"
+            class="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-xl border border-emerald-200/90 bg-white text-emerald-800 shadow-sm hover:bg-emerald-50 active:scale-95 transition-all duration-200"
+            aria-label="Open menu"
+            aria-controls="mobileMenu"
+            aria-expanded="false"
+          >
+            <svg
+              id="menuIconOpen"
+              viewBox="0 0 24 24"
+              class="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg
+              id="menuIconClose"
+              viewBox="0 0 24 24"
+              class="hidden h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg></button
+          ><a
+            href="see-your-savings.html"
+            class="hidden sm:inline-flex rounded-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 text-sm font-semibold"
+            >Free Estimate</a
+          >
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden pb-3 pt-2">
+          <ul
+            class="grid gap-2 text-sm font-semibold text-slate-700 rounded-2xl border border-emerald-100 bg-white/95 p-2 shadow-lg backdrop-blur"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="our-story.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a
+                href="services.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="why-choose-us.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Why Choose Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="see-your-savings.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >See Savings</a
+              >
+            </li>
+            <li>
+              <a
+                href="installation-process.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Installation</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="block rounded-xl border border-emerald-100 px-3.5 py-2.5 hover:bg-emerald-50 active:bg-emerald-100 transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="py-16 md:py-20 border-b border-emerald-100 bg-white/70">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p
+            class="text-xs uppercase tracking-wider text-emerald-600 font-semibold"
+          >
+            Contact Us
+          </p>
+          <h1 class="mt-3 text-4xl md:text-5xl font-extrabold text-emerald-950">
+            Talk To Our Solar Team
+          </h1>
+          <p class="mt-5 text-lg text-slate-600 max-w-3xl">
+            Share your requirements and get practical guidance from consultation
+            to commissioning.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Info Cards Section -->
+      <section class="py-12 md:py-16 bg-gradient-to-b from-emerald-50/50 to-transparent">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Phone Card -->
+            <div class="rounded-2xl bg-white border border-emerald-100 p-6 sm:p-8 hover:shadow-lg transition-all duration-300">
+              <div class="flex items-center justify-center w-14 h-14 rounded-full bg-emerald-100 mb-4">
+                <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-emerald-900">Phone</h3>
+              <p class="mt-3 text-slate-600 text-sm">Call us anytime for support</p>
+              <div class="mt-4 space-y-2">
+                <p class="text-emerald-700 font-semibold" data-site-phone>+91 7735732388</p>
+                <p class="text-slate-700" id="phonesDisplay"></p>
+              </div>
+            </div>
+
+            <!-- Email Card -->
+            <div class="rounded-2xl bg-white border border-emerald-100 p-6 sm:p-8 hover:shadow-lg transition-all duration-300">
+              <div class="flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 mb-4">
+                <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-emerald-900">Email</h3>
+              <p class="mt-3 text-slate-600 text-sm">Send us a detailed message</p>
+              <p class="mt-4 text-blue-700 font-semibold break-all" data-site-email>kalingagreentech@gmail.com</p>
+            </div>
+
+            <!-- Location Card -->
+            <div class="rounded-2xl bg-white border border-emerald-100 p-6 sm:p-8 hover:shadow-lg transition-all duration-300">
+              <div class="flex items-center justify-center w-14 h-14 rounded-full bg-orange-100 mb-4">
+                <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-emerald-900">Address</h3>
+              <p class="mt-3 text-slate-600 text-sm">Visit us at our office</p>
+              <p class="mt-4 text-orange-700 font-semibold" data-site-address>Nandan Vihar, Bhubaneswar, India</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Contact Section -->
+      <section class="py-14 md:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+            <!-- Contact Form -->
+            <div class="rounded-3xl bg-white border border-emerald-100 shadow-lg p-6 sm:p-10 hover:shadow-xl transition-shadow">
+              <div class="mb-6">
+                <h2 class="text-3xl font-bold text-emerald-900">Send Inquiry</h2>
+                <p class="mt-2 text-slate-600">Fill out the form below and we'll get back to you shortly</p>
+              </div>
+              <form id="inquiryForm" class="space-y-5">
+                <div>
+                  <label for="inquiryName" class="block text-sm font-medium text-slate-700 mb-2">Full Name *</label>
+                  <input
+                    type="text"
+                    id="inquiryName"
+                    name="name"
+                    placeholder="Enter your full name"
+                    class="w-full rounded-xl border border-emerald-200 px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="inquiryEmail" class="block text-sm font-medium text-slate-700 mb-2">Email Address *</label>
+                  <input
+                    type="email"
+                    id="inquiryEmail"
+                    name="email"
+                    placeholder="your@email.com"
+                    class="w-full rounded-xl border border-emerald-200 px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="inquiryPhone" class="block text-sm font-medium text-slate-700 mb-2">Phone Number *</label>
+                  <input
+                    type="tel"
+                    id="inquiryPhone"
+                    name="phone"
+                    placeholder="+91 XXXXXXXXXX"
+                    class="w-full rounded-xl border border-emerald-200 px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="inquiryMessage" class="block text-sm font-medium text-slate-700 mb-2">Message *</label>
+                  <textarea
+                    id="inquiryMessage"
+                    name="message"
+                    rows="5"
+                    placeholder="Tell us about your solar requirements..."
+                    class="w-full rounded-xl border border-emerald-200 px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-semibold px-6 py-3 transition-all hover:shadow-lg active:scale-95"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            <!-- Info & Benefits -->
+            <div>
+              <!-- Info Box -->
+              <div class="rounded-3xl bg-gradient-to-br from-emerald-600 via-emerald-600 to-sky-600 text-white p-8 sm:p-10 shadow-lg mb-8">
+                <h3 class="text-2xl font-bold mb-6">Why Contact Us?</h3>
+                <ul class="space-y-4">
+                  <li class="flex gap-3">
+                    <svg class="w-6 h-6 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Expert solar consulting from certified professionals</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <svg class="w-6 h-6 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Free custom quotes and savings estimates</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <svg class="w-6 h-6 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Fast response within 24 hours</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <svg class="w-6 h-6 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>End-to-end support from installation to commissioning</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Quick Contact Options -->
+              <div class="bg-white border border-emerald-100 rounded-3xl p-8 shadow-lg">
+                <h3 class="text-xl font-bold text-emerald-900 mb-6">Quick Contact Options</h3>
+                <div class="space-y-3">
+                  <a href="tel:+917735732388" class="flex items-center gap-3 p-4 rounded-xl bg-emerald-50 hover:bg-emerald-100 transition-colors group">
+                    <svg class="w-5 h-5 text-emerald-600 group-hover:text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773c.346 1.034.92 2.378 1.996 3.454 1.076 1.076 2.42 1.65 3.454 1.996l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.387 18 3 13.613 3 8V3z"></path>
+                    </svg>
+                    <div>
+                      <p class="font-semibold text-emerald-900">Call Us</p>
+                      <p class="text-sm text-slate-600">Immediate assistance</p>
+                    </div>
+                  </a>
+                  <a href="https://wa.me/917735732388?text=Hello%20Kalinga%20GreenTech%20Ltd.,%20I%20need%20assistance." target="_blank" class="flex items-center gap-3 p-4 rounded-xl bg-green-50 hover:bg-green-100 transition-colors group">
+                    <svg class="w-5 h-5 text-green-600 group-hover:text-green-700" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371 0-.57 0-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-9.746 9.798c0 2.719.738 5.376 2.139 7.686l-2.257 6.253 6.559-2.1a9.86 9.86 0 004.605 1.176h.004c5.487 0 9.948-4.467 9.948-9.959s-4.461-9.956-9.948-9.956"/>
+                    </svg>
+                    <div>
+                      <p class="font-semibold text-emerald-900">WhatsApp</p>
+                      <p class="text-sm text-slate-600">Chat with us live</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative bg-gradient-to-b from-emerald-950 via-emerald-900 to-slate-900 text-emerald-100 overflow-hidden">
+      <!-- Animated background elements -->
+      <div class="absolute top-0 left-0 w-96 h-96 bg-emerald-800/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-sky-800/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+        <!-- Top Section with Newsletter -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12 pb-8 border-b border-emerald-800/50">
+          <div class="footer-section">
+            <h3 class="brand-font text-2xl font-bold text-emerald-300 mb-3">Kalinga GreenTech</h3>
+            <p class="text-sm text-emerald-200 mb-6 leading-relaxed max-w-sm">
+              Trusted solar &amp; electrical contractor serving homes, businesses, and institutions across India with innovative green energy solutions.
+            </p>
+            <!-- Social Links -->
+            <div class="flex gap-4">
+              <a href="#" class="social-icon group" title="Facebook">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="#" class="social-icon group" title="Twitter">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 002.856-3.515 10 10 0 01-2.856.974 4.978 4.978 0 00-8.86 4.543c-4.332-.073-8.164-2.294-10.738-5.47a4.978 4.978 0 001.54 6.659 4.931 4.931 0 01-2.254-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 19.54a13.994 13.994 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+              <a href="#" class="social-icon group" title="LinkedIn">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="text-lg font-bold text-emerald-300 mb-4">Newsletter</h4>
+            <p class="text-sm text-emerald-200 mb-4">Get solar energy tips and updates delivered to your inbox</p>
+            <form class="flex flex-col gap-3" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                class="px-4 py-2 rounded-lg bg-emerald-900/50 border border-emerald-700 text-white placeholder-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all"
+                required
+              />
+              <button 
+                type="submit"
+                class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all hover:shadow-lg hover:shadow-emerald-500/50"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="grid md:grid-cols-3 gap-12 pb-8 border-b border-emerald-800/50">
+          <!-- Company Info -->
+          <div class="footer-section">
+            <h3 class="text-sm uppercase tracking-wide text-emerald-400 font-semibold mb-4">About</h3>
+            <ul class="space-y-3">
+              <li><a href="our-story.html" class="footer-link text-emerald-200">Our Story</a></li>
+              <li><a href="services.html" class="footer-link text-emerald-200">Services</a></li>
+              <li><a href="why-choose-us.html" class="footer-link text-emerald-200">Why Choose Us</a></li>
+              <li><a href="installation-process.html" class="footer-link text-emerald-200">Installation</a></li>
+            </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h3 class="text-sm uppercase tracking-wide text-emerald-400 font-semibold mb-4">Resources</h3>
+            <ul class="space-y-3">
+              <li><a href="see-your-savings.html" class="footer-link text-emerald-200">See Your Savings</a></li>
+              <li><a href="index.html" class="footer-link text-emerald-200">Home</a></li>
+              <li><a href="contact.html" class="footer-link text-emerald-200">Contact Us</a></li>
+              <li><a href="#" class="footer-link text-emerald-200">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-section">
+            <h3 class="text-sm uppercase tracking-wide text-emerald-400 font-semibold mb-4">Contact Info</h3>
+            <ul class="space-y-3 text-emerald-200 text-sm">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773c.346 1.034.92 2.378 1.996 3.454 1.076 1.076 2.42 1.65 3.454 1.996l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.387 18 3 13.613 3 8V3z"></path>
+                </svg>
+                <span data-site-phone>+91 7735732388</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <span data-site-email>kalingagreentech@gmail.com</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                <span data-site-address>Nandan Vihar, Bhubaneswar, India</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-xs text-emerald-300">
+            © <span class="font-semibold">2026 Kalinga GreenTech Ltd.</span> All rights reserved.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-xs text-emerald-300 hover:text-emerald-200 transition-colors">Privacy</a>
+            <span class="text-emerald-700">•</span>
+            <a href="#" class="text-xs text-emerald-300 hover:text-emerald-200 transition-colors">Terms</a>
+            <span class="text-emerald-700">•</span>
+            <a href="#" class="text-xs text-emerald-300 hover:text-emerald-200 transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuIconOpen = document.getElementById("menuIconOpen");
+      const menuIconClose = document.getElementById("menuIconClose");
+
+      if (mobileMenuBtn && mobileMenu && menuIconOpen && menuIconClose) {
+        mobileMenuBtn.addEventListener("click", function () {
+          const isHidden = mobileMenu.classList.contains("hidden");
+          mobileMenu.classList.toggle("hidden", !isHidden);
+          menuIconOpen.classList.toggle("hidden", isHidden);
+          menuIconClose.classList.toggle("hidden", !isHidden);
+          mobileMenuBtn.setAttribute("aria-expanded", String(isHidden));
+        });
+      }
+
+      const inquiryForm = document.getElementById("inquiryForm");
+      const inquiryName = document.getElementById("inquiryName");
+      const inquiryEmail = document.getElementById("inquiryEmail");
+      const inquiryPhone = document.getElementById("inquiryPhone");
+      const inquiryMessage = document.getElementById("inquiryMessage");
+
+      if (
+        inquiryForm &&
+        inquiryName &&
+        inquiryEmail &&
+        inquiryPhone &&
+        inquiryMessage
+      ) {
+        inquiryForm.addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          if (!inquiryForm.checkValidity()) {
+            inquiryForm.reportValidity();
+            return;
+          }
+
+          const name = inquiryName.value.trim();
+          const email = inquiryEmail.value.trim();
+          const phone = inquiryPhone.value.trim();
+          const message = inquiryMessage.value.trim();
+
+          const metaContact =
+            window.SITE_META && window.SITE_META.contact
+              ? window.SITE_META.contact
+              : null;
+          const emailTo =
+            (metaContact && metaContact.email) || "kalingagreentech@gmail.com";
+          const whatsappNumber =
+            (metaContact && metaContact.whatsappNumber) || "917735732388";
+          const subject = "New Inquiry - Website Contact Form";
+          const whatsappText = [
+            "Hello Kalinga GreenTech,",
+            "I am submitting an inquiry:",
+            "",
+            `Name: ${name}`,
+            `Email: ${email}`,
+            `Phone: ${phone}`,
+            `Requirement: ${message}`,
+          ].join("\n");
+
+          const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
+          const whatsappWindow = window.open(
+            "about:blank",
+            "_blank",
+            "noopener,noreferrer",
+          );
+
+          const submitBtn = inquiryForm.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
+          }
+
+          try {
+            const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(emailTo)}`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify({
+                _subject: subject,
+                name: name,
+                email: email,
+                phone: phone,
+                message: message,
+              }),
+            });
+
+            if (!response.ok) {
+              throw new Error("Email service failed");
+            }
+
+            if (whatsappWindow) {
+              whatsappWindow.location.href = whatsappUrl;
+            } else {
+              window.location.href = whatsappUrl;
+            }
+            inquiryForm.reset();
+            alert("Inquiry sent successfully on email and WhatsApp.");
+          } catch (error) {
+            if (whatsappWindow && !whatsappWindow.closed) {
+              whatsappWindow.close();
+            }
+            alert("Unable to send email right now. Please try again.");
+          } finally {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Submit Request";
+            }
+          }
+        });
+      }
+
+      // Display phones from SITE_META
+      const phonesDisplay = document.getElementById('phonesDisplay');
+      if (phonesDisplay && window.SITE_META && window.SITE_META.contact && window.SITE_META.contact.phones) {
+        const phones = window.SITE_META.contact.phones;
+        phonesDisplay.innerHTML = phones.map(phone => `<a href="tel:${phone}" class="hover:text-emerald-200">${phone}</a>`).join(', ');
+      }
+    </script>
+  <a
+  class="whatsapp-float-btn"
+  href="https://wa.me/917735732388?text=Hello%20Kalinga%20GreenTech%20Ltd.,%20I%20need%20assistance."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+>
+  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+    <path
+      fill="currentColor"
+      d="M13.601 2.326A7.854 7.854 0 0 0 8.001 0C3.58 0 0 3.58 0 8a7.9 7.9 0 0 0 1.153 4.115L0 16l3.993-1.128A7.95 7.95 0 0 0 8 16h.003c4.42 0 8-3.58 8-8a7.95 7.95 0 0 0-2.402-5.674m-5.6 12.325h-.003a6.6 6.6 0 0 1-3.36-.92l-.24-.144-2.37.67.633-2.31-.156-.237a6.58 6.58 0 0 1-1.015-3.507C1.49 4.51 4.51 1.49 8.001 1.49c1.76 0 3.418.686 4.662 1.93A6.58 6.58 0 0 1 14.513 8c0 3.692-3.02 6.651-6.512 6.651m3.615-4.995c-.198-.099-1.173-.579-1.354-.645s-.313-.099-.446.1-.512.644-.628.777-.231.148-.429.05c-.197-.099-.833-.307-1.587-.98-.586-.522-.98-1.166-1.095-1.364s-.012-.304.087-.402c.09-.089.198-.232.297-.347.099-.116.132-.198.198-.33.066-.132.033-.248-.017-.347-.05-.099-.446-1.076-.611-1.473-.161-.387-.324-.334-.446-.34l-.38-.007a.73.73 0 0 0-.529.248c-.182.198-.694.678-.694 1.653s.71 1.918.81 2.05c.099.133 1.4 2.137 3.394 2.996.474.205.843.327 1.132.418.476.152.908.131 1.25.08.381-.057 1.173-.479 1.338-.942.165-.462.165-.859.116-.942-.05-.083-.182-.132-.38-.231"
+    />
+  </svg>
+  <span class="sr-only">WhatsApp</span>
+</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

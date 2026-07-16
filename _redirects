@@ -1,3 +1,4 @@
 # Send the domain root and the old lander path to the homepage
 / /index.html 200
 /lander /index.html 200
+/404 /404.html 200

@@ -244,6 +244,96 @@
     }
   }
 </style>
+  <style>
+  /* Footer Animations */
+  @keyframes float-up {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes slide-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(16, 185, 129, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+    }
+  }
+
+  .footer-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #10b981;
+    transition: width 0.3s ease;
+  }
+
+  .footer-link:hover::after {
+    width: 100%;
+  }
+
+  .footer-link:hover {
+    color: #ffffff;
+  }
+
+  .footer-section {
+    animation: slide-in-up 0.6s ease-out forwards;
+  }
+
+  .footer-section:nth-child(1) { animation-delay: 0.1s; }
+  .footer-section:nth-child(2) { animation-delay: 0.2s; }
+  .footer-section:nth-child(3) { animation-delay: 0.3s; }
+
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    transition: all 0.3s ease;
+    animation: float-up 3s ease-in-out infinite;
+  }
+
+  .social-icon:hover {
+    background-color: #10b981;
+    color: #ffffff;
+    transform: scale(1.1);
+  }
+
+  .social-icon:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .social-icon:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+</style>
     <script src="site-meta.js"></script>
     <script src="site-meta-loader.js" defer></script>
 </head>
@@ -258,9 +348,9 @@
             class="transition-all duration-300 hover:scale-105 hover:opacity-80 inline-flex items-center gap-2"
           >
             <img
-              src="Designer.png"
+              src="logo.png"
               alt="Kalinga GreenTech"
-              class="h-12 sm:h-14 lg:h-16 w-auto object-contain drop-shadow-sm transition-all duration-300"
+              class="h-[3.5rem] w-auto object-contain drop-shadow-sm transition-all duration-300"
             />
             <span
               class="brand-font text-base sm:text-lg font-bold text-emerald-800 leading-tight"
@@ -451,13 +541,13 @@
                   class="rounded-xl bg-white border border-emerald-100 p-3 shadow-sm"
                 >
                   <p class="text-xs text-slate-500">Solar Systems Installed</p>
-                  <p class="brand-font text-lg text-emerald-800">900+</p>
+                  <p class="brand-font text-lg text-emerald-800">100+</p>
                 </div>
                 <div
                   class="rounded-xl bg-white border border-emerald-100 p-3 shadow-sm"
                 >
                   <p class="text-xs text-slate-500">Megawatts Installed</p>
-                  <p class="brand-font text-lg text-emerald-800">28.3+</p>
+                  <p class="brand-font text-lg text-emerald-800">1+</p>
                 </div>
                 <div
                   class="rounded-xl bg-white border border-emerald-100 p-3 shadow-sm col-span-2 sm:col-span-1"
@@ -719,7 +809,7 @@
                   rooftops.
                 </p>
                 <p class="mt-4 font-bold text-emerald-600">
-                  Starting from &#8377;10,000
+                  Starting from &#8377;7,000
                 </p>
                 <a
                   href="ecopanel-basic.html"
@@ -747,7 +837,7 @@
                   backup integration.
                 </p>
                 <p class="mt-4 font-bold text-emerald-600">
-                  Starting from &#8377;19,000
+                  Starting from &#8377;10,000
                 </p>
                 <a
                   href="inverter-system.html"
@@ -775,7 +865,7 @@
                   during outages.
                 </p>
                 <p class="mt-4 font-bold text-emerald-600">
-                  Starting from &#8377;36,000
+                  Starting from &#8377;9,000
                 </p>
                 <a
                   href="battery-storage.html"
@@ -963,7 +1053,7 @@
               <li><a href="see-your-savings.html" class="footer-link text-emerald-200">See Your Savings</a></li>
               <li><a href="index.html" class="footer-link text-emerald-200">Home</a></li>
               <li><a href="contact.html" class="footer-link text-emerald-200">Contact Us</a></li>
-              <li><a href="#" class="footer-link text-emerald-200">Privacy Policy</a></li>
+              <li><a href="privacy-policy.html" class="footer-link text-emerald-200">Privacy Policy</a></li>
             </ul>
           </div>
 
@@ -994,17 +1084,17 @@
         </div>
 
         <!-- Bottom Section -->
-        <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="pt-6 flex flex-col md:flex-column items-center justify-between gap-4">
           <p class="text-xs text-emerald-300">
             © <span class="font-semibold">2026 Kalinga GreenTech Ltd.</span> All rights reserved.
           </p>
-          <div class="flex items-center gap-4">
+           <!-- <div class="flex items-center gap-4">
             <a href="#" class="text-xs text-emerald-300 hover:text-emerald-200 transition-colors">Privacy</a>
             <span class="text-emerald-700">•</span>
             <a href="#" class="text-xs text-emerald-300 hover:text-emerald-200 transition-colors">Terms</a>
             <span class="text-emerald-700">•</span>
             <a href="#" class="text-xs text-emerald-300 hover:text-emerald-200 transition-colors">Cookies</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </footer>
